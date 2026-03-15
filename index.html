@@ -117,7 +117,7 @@
 
     .field { margin-bottom: 22px; }
 
-    select, input[type="text"], input[type="date"] {
+    select, input[type="text"], input[type="date"], input[type="email"] {
       width: 100%;
       padding: 13px 16px;
       background: rgba(10,30,80,0.55);
@@ -353,7 +353,7 @@
   const today = new Date().toISOString().split('T')[0];
   document.getElementById('date').value = today;
 
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbywTu054DqwK-wcoJy5tUNlWdemlcUoMLhHY9Rnn_5SaHwo_yG1l7Y8yprAb-ORuAOHGw/exec';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw-fm5b_bjvFD8FR2-sHCRNTW-mxqYFSCVTf326u6e2TMc-ewN1Bhn3D-hj2_HgllIcog/exec';
 
   function showToast(msg, type = '') {
     const t = document.getElementById('toast');
