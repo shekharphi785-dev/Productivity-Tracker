@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Email LOB – Productivity Tracker</title>
+<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,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"/>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cyan:#00f5ff;--green:#00ff9d;--red:#ff4565;--amber:#ffb800;
+  --glass-bg:rgba(255,255,255,0.04);--glass-border:rgba(255,255,255,0.10);
+  --text:#e2eeff;--muted:rgba(180,200,240,0.5);--label:rgba(0,245,255,0.75);
+  --font:'Exo 2',sans-serif;--mono:'Share Tech Mono',monospace;
+}
+body{background:#020c18;font-family:var(--font);color:var(--text);min-height:100vh;overflow-x:hidden;position:relative;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,245,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,255,0.04) 1px,transparent 1px);background-size:44px 44px;animation:gridDrift 20s linear infinite;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(0,245,255,0.07) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 90% 80%,rgba(0,255,157,0.05) 0%,transparent 60%);pointer-events:none;z-index:0;}
+@keyframes gridDrift{to{background-position:44px 44px}}
+.page{position:relative;z-index:1;max-width:660px;margin:0 auto;padding:2.5rem 1.2rem 5rem;}
+
+/* HEADER */
+.hdr{margin-bottom:2rem;animation:fadeUp .3s ease both;}
+.hdr-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase;border:1px solid rgba(0,245,255,0.25);background:rgba(0,245,255,0.06);padding:4px 10px;border-radius:4px;margin-bottom:.9rem;}
+.hdr-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hdr h1{font-size:1.9rem;font-weight:700;letter-spacing:-.02em;line-height:1.15;background:linear-gradient(135deg,#fff 40%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hdr p{margin-top:.4rem;font-size:13px;color:var(--muted);font-weight:300;}
+
+/* LOB TABS */
+.lob-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.4rem;animation:fadeUp .35s ease both;}
+.lob-tab{padding:14px 16px;border-radius:10px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(12px);color:var(--muted);font-family:var(--font);font-size:13px;font-weight:500;cursor:pointer;text-align:left;transition:all .2s ease;position:relative;overflow:hidden;}
+.lob-tab::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,245,255,0.08),transparent);opacity:0;transition:opacity .2s;}
+.lob-tab:hover{border-color:rgba(0,245,255,0.3);color:var(--text);}
+.lob-tab:hover::before,.lob-tab.active::before{opacity:1;}
+.lob-tab.active{border-color:var(--cyan);color:var(--text);background:rgba(0,245,255,0.07);box-shadow:0 0 20px rgba(0,245,255,0.08),inset 0 1px 0 rgba(0,245,255,0.2);}
+.tab-code{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--cyan);margin-bottom:4px;opacity:.7;}
+.lob-tab.active .tab-code{opacity:1;}
+
+/* GLASS TILES — KEY FIX: overflow must NOT be hidden so dropdown can escape */
+.glass-tile{
+  background:var(--glass-bg);border:1px solid var(--glass-border);
+  border-radius:14px;backdrop-filter:blur(20px);
+  padding:1.6rem;margin-bottom:12px;
+  position:relative;
+  /* overflow:hidden REMOVED — was clipping the dropdown */
+  transition:border-color .2s;animation:fadeUp .4s ease both;
+}
+/* top shimmer line via pseudo — needs overflow visible so we use inset box-shadow instead */
+.glass-tile::after{
+  content:'';position:absolute;top:0;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(0,245,255,0.35),transparent);
+  border-radius:1px;pointer-events:none;
+}
+.glass-tile:hover{border-color:rgba(0,245,255,0.2);}
+.glass-tile:nth-child(2){animation-delay:.06s;}
+.glass-tile:nth-child(3){animation-delay:.12s;}
+.glass-tile:nth-child(4){animation-delay:.18s;}
+.glass-tile:nth-child(5){animation-delay:.24s;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+.tile-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--label);text-transform:uppercase;margin-bottom:1.1rem;display:flex;align-items:center;gap:7px;}
+.tile-label::before{content:'//';opacity:.4;}
+
+/* FIELDS */
+.field{margin-bottom:1.1rem;}.field:last-child{margin-bottom:0;}
+label.fl{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,245,255,0.6);margin-bottom:6px;}
+label.fl .req{color:var(--cyan);margin-left:2px;}
+input[type="text"],input[type="date"],textarea{
+  width:100%;background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.1);
+  border-radius:8px;color:var(--text);font-family:var(--mono);font-size:13px;
+  padding:10px 14px;outline:none;transition:border-color .15s,box-shadow .15s;
+  appearance:none;-webkit-appearance:none;
+}
+input::placeholder,textarea::placeholder{color:rgba(180,200,240,0.2);}
+input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,245,255,0.1);}
+input.valid{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,255,157,0.08);}
+input.invalid{border-color:var(--red);box-shadow:0 0 0 3px rgba(255,69,101,0.1);}
+.hint{margin-top:5px;font-family:var(--mono);font-size:10px;color:var(--muted);}
+.hint.err{color:var(--red);}.hint.ok{color:var(--green);}
+input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(.5) sepia(1) saturate(3) hue-rotate(150deg);cursor:pointer;}
+textarea{resize:vertical;line-height:1.6;font-size:12px;}
+
+/* CUSTOM DROPDOWN — z-index stacking context fix */
+.cselect-wrap{position:relative;z-index:50;}
+.cselect-trigger{
+  width:100%;background:rgba(0,0,0,0.35);
+  border:1px solid rgba(255,255,255,0.1);border-radius:8px;
+  color:var(--text);font-family:var(--mono);font-size:13px;
+  padding:10px 14px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:border-color .15s,box-shadow .15s;user-select:none;
+}
+.cselect-trigger:hover{border-color:rgba(0,245,255,0.3);}
+.cselect-trigger.open{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,245,255,0.1);}
+.cselect-trigger .ph{color:rgba(180,200,240,0.25);}
+.cselect-trigger .val{color:var(--cyan);}
+.chevron{
+  width:9px;height:9px;flex-shrink:0;
+  border-right:1.5px solid var(--cyan);border-bottom:1.5px solid var(--cyan);
+  transform:rotate(45deg) translateY(-2px);transition:transform .2s;
+}
+.cselect-trigger.open .chevron{transform:rotate(225deg) translateY(2px);}
+
+.drop-panel{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;
+  background:rgba(3,12,28,0.98);
+  border:1px solid rgba(0,245,255,0.3);
+  border-radius:10px;
+  /* HIGH z-index so it floats above everything */
+  z-index:9999;
+  overflow:hidden;
+  /* Use visibility + opacity + transform for smooth animation without max-height clipping issues */
+  visibility:hidden;opacity:0;transform:translateY(-6px);
+  transition:opacity .2s ease,transform .2s ease,visibility 0s .2s;
+  box-shadow:0 24px 60px rgba(0,0,0,0.8),0 0 0 1px rgba(0,245,255,0.06);
+}
+.drop-panel.open{
+  visibility:visible;opacity:1;transform:translateY(0);
+  transition:opacity .2s ease,transform .2s ease,visibility 0s 0s;
+}
+
+.drop-scroll{max-height:260px;overflow-y:auto;}
+.drop-scroll::-webkit-scrollbar{width:3px;}
+.drop-scroll::-webkit-scrollbar-track{background:transparent;}
+.drop-scroll::-webkit-scrollbar-thumb{background:rgba(0,245,255,0.25);border-radius:2px;}
+
+.drop-item{
+  display:flex;align-items:center;gap:8px;
+  padding:11px 14px;font-family:var(--mono);font-size:12px;
+  color:rgba(180,200,240,0.6);cursor:pointer;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  transition:background .12s,color .12s;
+}
+.drop-item:last-child{border-bottom:none;}
+.drop-arrow{color:var(--cyan);opacity:0;transition:opacity .12s;font-size:11px;flex-shrink:0;}
+.drop-item:hover{background:rgba(0,245,255,0.08);color:var(--text);}
+.drop-item:hover .drop-arrow{opacity:1;}
+.drop-item.selected{background:rgba(0,245,255,0.12);color:var(--cyan);}
+.drop-item.selected .drop-arrow{opacity:1;}
+.drop-name{flex:1;}
+.drop-del{
+  color:rgba(255,69,101,0.35);font-size:16px;line-height:1;
+  padding:2px 4px;transition:color .12s;cursor:pointer;flex-shrink:0;
+}
+.drop-del:hover{color:var(--red);}
+
+.drop-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,245,255,0.2),transparent);margin:2px 0;}
+
+.add-row{display:flex;align-items:center;gap:8px;padding:10px 14px;}
+.add-row input{
+  flex:1;padding:7px 10px;font-size:11px;border-radius:6px;
+  background:rgba(0,0,0,0.5);border:1px solid rgba(0,245,255,0.15);
+  color:var(--text);font-family:var(--mono);outline:none;transition:border-color .15s;
+}
+.add-row input:focus{border-color:var(--cyan);}
+.add-row input::placeholder{color:rgba(180,200,240,0.2);}
+.add-row-btn{
+  padding:7px 13px;background:rgba(0,245,255,0.1);
+  border:1px solid rgba(0,245,255,0.3);border-radius:6px;
+  color:var(--cyan);font-family:var(--mono);font-size:11px;
+  cursor:pointer;transition:background .15s;white-space:nowrap;
+}
+.add-row-btn:hover{background:rgba(0,245,255,0.22);}
+
+/* SETUP BANNER — collapsible */
+
+
+
+
+
+
+
+
+
+
+
+
+/* saved state pill */
+
+
+
+
+/* SUBMIT */
+.submit-btn{
+  width:100%;padding:14px;
+  background:linear-gradient(135deg,rgba(0,245,255,0.18),rgba(0,245,255,0.07));
+  border:1px solid var(--cyan);border-radius:10px;
+  color:var(--cyan);font-family:var(--mono);font-size:13px;
+  font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  position:relative;overflow:hidden;
+}
+.submit-btn:hover{background:linear-gradient(135deg,rgba(0,245,255,0.28),rgba(0,245,255,0.14));box-shadow:0 0 28px rgba(0,245,255,0.15);}
+.submit-btn:disabled{opacity:.4;cursor:not-allowed;}
+.spinner{width:14px;height:14px;border:2px solid rgba(0,245,255,0.3);border-top-color:var(--cyan);border-radius:50%;animation:spin .7s linear infinite;display:none;}
+.spinner.on{display:block;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* TOAST */
+.toast{position:fixed;top:1.4rem;right:1.4rem;padding:12px 18px;border-radius:10px;font-family:var(--mono);font-size:12px;border:1px solid;backdrop-filter:blur(20px);opacity:0;transform:translateY(-10px) scale(.97);transition:all .22s ease;pointer-events:none;z-index:99999;max-width:320px;}
+.toast.show{opacity:1;transform:translateY(0) scale(1);}
+.toast.success{background:rgba(0,255,157,0.08);border-color:rgba(0,255,157,0.35);color:var(--green);}
+.toast.error{background:rgba(255,69,101,0.08);border-color:rgba(255,69,101,0.35);color:var(--red);}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-badge">Email LOB · Productivity Tracker</div>
+    <h1>Productivity Tracker</h1>
+    <p>Select LOB type · fill SR details · assign agent · syncs to Google Sheets in real time.</p>
+  </div>
+
+    <!-- LOB TABS -->
+  <div class="lob-tabs">
+    <button class="lob-tab active" data-type="SFDC" onclick="selectType(this)">
+      <span class="tab-code">01 // SFDC</span>WEB Email — consumersupport
+    </button>
+    <button class="lob-tab" data-type="Email" onclick="selectType(this)">
+      <span class="tab-code">02 // EMAIL</span>Email — customercare
+    </button>
+  </div>
+
+  <!-- SR DETAILS -->
+  <div class="glass-tile">
+    <div class="tile-label">SR Details</div>
+    <div class="field">
+      <label class="fl">Service Request No. <span class="req">*</span></label>
+      <input type="text" id="srNumber" placeholder="60-00XXXXXXXX" maxlength="14" oninput="validateSR(this)"/>
+      <div class="hint" id="srHint">Format: 60-00 followed by 8 digits</div>
+    </div>
+    <div class="field">
+      <label class="fl">Date <span class="req">*</span></label>
+      <input type="date" id="srDate"/>
+    </div>
+  </div>
+
+  <!-- CONSUMER INFO -->
+  <div class="glass-tile">
+    <div class="tile-label">Consumer Info</div>
+    <div class="field">
+      <label class="fl">Consumer Email ID <span class="req">*</span></label>
+      <textarea id="consumerEmail" rows="3" placeholder="Paste consumer email here…"></textarea>
+      <div class="hint">Full email thread is fine — address will be auto-extracted.</div>
+    </div>
+  </div>
+
+  <!-- AGENT — overflow:visible is critical here -->
+  <div class="glass-tile" style="overflow:visible;z-index:10;">
+    <div class="tile-label">Assign Productivity</div>
+    <div class="field">
+      <label class="fl">Agent Name <span class="req">*</span></label>
+      <div class="cselect-wrap" id="csWrap">
+        <div class="cselect-trigger" id="csTrigger" onclick="toggleDrop()">
+          <span id="csLabel" class="ph">— select agent —</span>
+          <span class="chevron"></span>
+        </div>
+        <div class="drop-panel" id="dropPanel">
+          <div class="drop-scroll" id="dropList"></div>
+          <div class="drop-divider"></div>
+          <div class="add-row">
+            <input type="text" id="newAgentInp" placeholder="Type new agent name…"
+              onclick="event.stopPropagation()"
+              onkeydown="if(event.key==='Enter'){event.preventDefault();addAgent();}"/>
+            <button class="add-row-btn" onclick="event.stopPropagation();addAgent()">+ ADD</button>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" id="agentName"/>
+    </div>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="glass-tile">
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+      <div class="spinner" id="spinner"></div>
+      <span id="submitLabel">[ SUBMIT TO GOOGLE SHEETS ]</span>
+    </button>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+const DEFAULT_AGENTS=['SIDDHARTH','MOHIT','DIPOK','DEEPAK KUMAR','DEEPAK SAW','PRIYANSHU'];
+const SR_RE=/^60-00\d{8}$/;
+let selectedType='SFDC', selectedAgent='', agents=[];
+
+/* ── AGENTS ── */
+function loadAgents(){const s=localStorage.getItem('trackerAgents');agents=s?JSON.parse(s):[...DEFAULT_AGENTS];}
+function saveAgents(){localStorage.setItem('trackerAgents',JSON.stringify(agents));}
+
+function renderList(){
+  const list=document.getElementById('dropList');
+  list.innerHTML='';
+  agents.forEach(name=>{
+    const d=document.createElement('div');
+    d.className='drop-item'+(name===selectedAgent?' selected':'');
+    d.innerHTML=
+      '<span class="drop-arrow">›</span>'+
+      '<span class="drop-name">'+name+'</span>'+
+      '<span class="drop-del" title="Remove">×</span>';
+    // clicking name selects; clicking × removes
+    d.querySelector('.drop-name').addEventListener('click',function(e){e.stopPropagation();pickAgent(name);});
+    d.querySelector('.drop-arrow').addEventListener('click',function(e){e.stopPropagation();pickAgent(name);});
+    d.querySelector('.drop-del').addEventListener('click',function(e){e.stopPropagation();removeAgent(name);});
+    list.appendChild(d);
+  });
+}
+
+function pickAgent(name){
+  selectedAgent=name;
+  document.getElementById('agentName').value=name;
+  const lbl=document.getElementById('csLabel');
+  lbl.textContent=name; lbl.className='val';
+  closeDrop();
+  renderList();
+}
+
+function removeAgent(name){
+  agents=agents.filter(a=>a!==name);
+  if(selectedAgent===name){
+    selectedAgent='';
+    document.getElementById('agentName').value='';
+    const l=document.getElementById('csLabel');
+    l.textContent='— select agent —'; l.className='ph';
+  }
+  saveAgents(); renderList();
+}
+
+function addAgent(){
+  const inp=document.getElementById('newAgentInp');
+  const v=inp.value.trim().toUpperCase();
+  if(!v||agents.includes(v)){inp.value='';return;}
+  agents.push(v); saveAgents(); renderList();
+  inp.value=''; pickAgent(v);
+}
+
+/* ── DROPDOWN TOGGLE ── */
+function toggleDrop(){
+  const p=document.getElementById('dropPanel'),t=document.getElementById('csTrigger');
+  if(p.classList.contains('open')){closeDrop();}
+  else{renderList(); p.classList.add('open'); t.classList.add('open');}
+}
+function closeDrop(){
+  document.getElementById('dropPanel').classList.remove('open');
+  document.getElementById('csTrigger').classList.remove('open');
+}
+// close when clicking outside
+document.addEventListener('click',function(e){
+  if(!document.getElementById('csWrap').contains(e.target)) closeDrop();
+});
+
+/* ── SETUP BANNER ── */
+
+
+
+
+/* ── LOB TYPE ── */
+function selectType(btn){
+  document.querySelectorAll('.lob-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active'); selectedType=btn.dataset.type;
+}
+
+/* ── SR VALIDATION ── */
+function validateSR(inp){
+  const v=inp.value.trim(),h=document.getElementById('srHint');
+  if(!v){inp.className='';h.className='hint';h.textContent='Format: 60-00 followed by 8 digits';}
+  else if(SR_RE.test(v)){inp.className='valid';h.className='hint ok';h.textContent='✓ Valid SR number';}
+  else{inp.className='invalid';h.className='hint err';h.textContent='Must be: 60-00 + 8 digits (14 chars total)';}
+}
+
+function extractEmail(t){const m=t.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);return m?m[0]:t.trim();}
+
+/* ── SAVE SCRIPT URL ── */
+
+
+/* ── SUBMIT ── */
+async function submitForm(){
+  const srNum=document.getElementById('srNumber').value.trim();
+  const srDate=document.getElementById('srDate').value;
+  const raw=document.getElementById('consumerEmail').value.trim();
+  if(!SR_RE.test(srNum)){showToast('SR number format invalid: 60-00XXXXXXXX','error');return;}
+  if(!srDate){showToast('Please select a date','error');return;}
+  if(!raw){showToast('Consumer email is required','error');return;}
+  if(!selectedAgent){showToast('Please select an agent','error');return;}
+  const url='https://script.google.com/macros/s/AKfycbywTu054DqwK-wcoJy5tUNlWdemlcUoMLhHY9Rnn_5SaHwo_yG1l7Y8yprAb-ORuAOHGw/exec';
+  setLoading(true);
+  const payload={
+    lob:'Email',emailType:selectedType,
+    queue:selectedType==='SFDC'?'consumersupport':'customercare',
+    srNumber:srNum,date:srDate,
+    consumerEmail:extractEmail(raw),
+    agent:selectedAgent,timestamp:new Date().toISOString()
+  };
+  try{
+    await fetch(url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    showToast('✓ Logged: '+srNum+' → '+selectedAgent,'success');
+    resetForm();
+  }catch(e){showToast('Submission failed. Check Apps Script URL.','error');}
+  finally{setLoading(false);}
+}
+
+function setLoading(on){
+  const b=document.getElementById('submitBtn'),s=document.getElementById('spinner'),l=document.getElementById('submitLabel');
+  b.disabled=on; s.classList.toggle('on',on);
+  l.textContent=on?'TRANSMITTING…':'[ SUBMIT TO GOOGLE SHEETS ]';
+}
+
+function resetForm(){
+  document.getElementById('srNumber').value=''; document.getElementById('srNumber').className='';
+  document.getElementById('srHint').className='hint'; document.getElementById('srHint').textContent='Format: 60-00 followed by 8 digits';
+  document.getElementById('srDate').value=new Date().toISOString().split('T')[0];
+  document.getElementById('consumerEmail').value='';
+  selectedAgent=''; document.getElementById('agentName').value='';
+  const l=document.getElementById('csLabel'); l.textContent='— select agent —'; l.className='ph';
+  renderList();
+}
+
+function showToast(msg,type){
+  const t=document.getElementById('toast'); t.textContent=msg; t.className='toast '+type+' show';
+  setTimeout(()=>t.classList.remove('show'),4000);
+}
+
+/* ── INIT ── */
+const HARDCODED_URL='https://script.google.com/macros/s/AKfycbz4-UM43ze4riyKJ8vVk0B7bj22iqK_f4L19aH5MyU7FMMSVqHi-NTSH3r0ZLqtFZgn/exec';
+loadAgents();
+document.getElementById('srDate').value=new Date().toISOString().split('T')[0];
+// Always ensure the hardcoded URL is saved
+// Google Sheets URL pre-configured
+</script>
+
+<!--
+════════════════════════════════════════════════════════════
+  GOOGLE SHEETS SETUP (one-time)
+════════════════════════════════════════════════════════════
+1. Open your Google Sheet. Add headers in Row 1:
+   Timestamp | LOB | Email Type | Queue | SR Number | Date | Consumer Email | Agent
+
+2. Click Extensions → Apps Script. Replace all code with:
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  sheet.appendRow([data.timestamp, data.lob, data.emailType, data.queue,
+    data.srNumber, data.date, data.consumerEmail, data.agent]);
+  return ContentService.createTextOutput(JSON.stringify({status:'ok'}))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+3. Deploy → New deployment → Web app
+   Execute as: Me | Who has access: Anyone → Deploy → Authorize
+
+4. Copy the Web App URL → paste into the setup banner → [ SAVE ]
+════════════════════════════════════════════════════════════
+-->
+</body>
+</html>
