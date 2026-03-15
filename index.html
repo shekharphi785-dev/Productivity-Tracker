@@ -326,20 +326,20 @@
 
     <!-- Case Number -->
     <div class="field">
-      <label for="caseNumber">Case Number</label>
-      <input type="text" id="caseNumber" name="caseNumber" required autocomplete="off"/>
+      <label for="caseNumber">🗂️ Case Number</label>
+      <input type="text" id="caseNumber" name="caseNumber" placeholder="e.g. CASE-2024-001" required autocomplete="off"/>
     </div>
-    
- <!-- Email -->
-    <div class="field">
-      <label for="Email">Email</label>
-      <input type="text" id="Email" name="Email" required autocomplete="off"/>
-    </div>
-    
+
     <!-- Date -->
     <div class="field">
-      <label for="date">Date</label>
+      <label for="date">📅 Date</label>
       <input type="date" id="date" name="date" required/>
+    </div>
+
+    <!-- Email -->
+    <div class="field">
+      <label for="email">✉️ Email Address</label>
+      <input type="email" id="email" name="email" placeholder="e.g. name@example.com" required autocomplete="off"/>
     </div>
 
     <button class="btn" type="submit" id="submitBtn">Submit Entry</button>
@@ -383,6 +383,7 @@
       origin:     origin.value,
       caseNumber: document.getElementById('caseNumber').value.trim(),
       date:       document.getElementById('date').value,
+      email:      document.getElementById('email').value.trim(),
       timestamp:  new Date().toISOString()
     };
 
